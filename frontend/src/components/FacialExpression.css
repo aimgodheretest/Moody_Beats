@@ -1,0 +1,24 @@
+.user-video-feed {
+    width: 20rem;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 1rem;
+    border: 2px solid #fff;
+ margin: 4rem;
+
+}
+
+.mood-detector {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.mood-detector button {
+    padding: 0.5rem 1rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
