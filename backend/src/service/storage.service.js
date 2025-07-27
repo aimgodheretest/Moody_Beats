@@ -1,3 +1,4 @@
+var mongoose = require("mongoose"); // Importing mongoose for MongoDB interactions
 // Importing the ImageKit SDK for file uploads
 // This module handles file uploads to ImageKit, a cloud storage service.
 var ImageKit = require("imagekit");
@@ -12,9 +13,10 @@ const uploadFile = (file) => {
   return new Promise((resolve, reject) => {
     imagekit.upload(
       {
-        file: file.buffer, // The file buffer
-        fileName: "Millionaire", // The name of the file
-        // folder: "songs", // Optional folder to upload to
+        file: file.buffer,
+        fileName: file.originalname, // The name of the file being uploaded
+        useUniqueFileName: true, // Ensures the file name is unique
+        folder: "MoodPlayerSongs", // The folder where the file will be stored
       },
       (error, result) => {
         if (error) {
