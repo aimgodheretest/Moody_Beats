@@ -8,7 +8,7 @@ var imagekit = new ImageKit({
 });
 
 // Function to upload a file to ImageKit
-const uploadFileToImageKit = (file) => {
+const uploadFile = (file) => {
   return new Promise((resolve, reject) => {
     imagekit.upload(
       {
@@ -27,4 +27,5 @@ const uploadFileToImageKit = (file) => {
   });
 };
 
-module.exports = uploadFileToImageKit;
+module.exports = uploadFile; // Exporting the uploadFile function for use in other modules
+// This function can be used to upload files to ImageKit from other parts of the application.
