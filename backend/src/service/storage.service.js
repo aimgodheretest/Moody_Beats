@@ -1,4 +1,3 @@
-var mongoose = require("mongoose"); // Importing mongoose for MongoDB interactions
 // Importing the ImageKit SDK for file uploads
 // This module handles file uploads to ImageKit, a cloud storage service.
 var ImageKit = require("imagekit");
