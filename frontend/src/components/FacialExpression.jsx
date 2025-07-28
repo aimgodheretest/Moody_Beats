@@ -40,7 +40,7 @@ export default function FacialExpression({ setSongs }) {
       }
     }
     axios
-      .get(`http://localhost:3000/songs?mood=${_expression}`)
+      .get(`http://localhost:3000/songs?mood=${_expression}`) // Adjust the URL as needed
       .then((response) => {
         console.log(response.data);
         setSongs(response.data.songs);
@@ -54,7 +54,7 @@ export default function FacialExpression({ setSongs }) {
 
   return (
     <div className="mood-detector">
-      <video ref={videoRef} autoPlay muted className="user-video-feed" />
+      <video ref={videoRef} autoPlay muted className="user-video-feed" /> 
       <button onClick={detectMood}>Detect Mood</button>
     </div>
   );
